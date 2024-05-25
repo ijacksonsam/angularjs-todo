@@ -1,0 +1,58 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.todoList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  width: 20rem;
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  padding-right: 3rem;
+  justify-content: center;
+}
+
+.todo {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  border-bottom: 1px solid black;
+  justify-content: space-between;
+}
+
+.rmv-btn {
+  height: 100%;
+  color: red;
+  cursor: pointer;
+  background: none;
+  border: none;
+}

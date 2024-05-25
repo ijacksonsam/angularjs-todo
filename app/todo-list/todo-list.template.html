@@ -1,0 +1,13 @@
+<div>
+    <label for="ip">Enter todo</label>
+    <input type="text" placeholder="todo" ng-model="$ctrl.todo">
+    <button ng-click="$ctrl.addTodo($ctrl.todo)">Add Task</button>
+</div>
+<p ng-if="$ctrl.todoList.length===0">Nothing added yet ...</p>
+<ul ng-if="$ctrl.todoList.length>0" class="todoList">
+    <li ng-repeat="todo in $ctrl.todoList | orderBy:['completed']" class="todo">
+        <input type="checkbox" ng-model="todo.completed">
+        <p ng-class="{ 'completed': todo.completed }">{{todo.task}}</p>
+        <button ng-click="$ctrl.removeTodo(todo)" class="rmv-btn">X</button>
+    </li>
+</ul>
